@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: rgb(245, 245, 245);
+  --color: rgb(37, 37, 37);
+  --primary: white;
+  --primary-sub: rgba(255, 255, 255, 0.594);
+  --primary-white: rgba(255, 255, 255, 0.863);
+  --search: rgba(204, 204, 204, 0.393);
+  --spec: rgb(58, 69, 83);
+  --spec2: rgb(0, 166, 255);
+  --spec3: rgb(221, 19, 19);
+  --shadow: rgba(90, 90, 90, 0.089); 
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--background);
+  display: flex;
+}
+
+#root {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--search);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+.App {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+}
+
+
+.back {
+  width: fit-content;
+}
+
+.back a {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 20px;
+  color: var(--color)
+  ;
+}
+
+.back p {
+  font-size: 14px;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  max-height: 70px;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: var(--color);
+  font-weight: 500;
+  font-size: 26px;
+  color: var(--spec2)
+}
+
+.Nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+}
+
+.searchForm {
+  flex: 1;
+  max-width: 500px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: var(--search);
+  display: flex;
+  padding: 0 10px;
+}
+
+.searchForm input {
+  width: 100%;
+  height: inherit;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 10px 10px;
+  color: var(--color);
+  font-size: 16px;
+}
+
+.searchForm input::placeholder {
+  color: var(--color);
+  font-size: 16px;
+  opacity: 0.6
+}
+
+.searchForm .searchBtn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+}
+
+main {
+  width: 100%;
+  flex-grow: 1;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 20px 20px 20px 20px;
+}
+
+.banner {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 200px;
+  border-radius: 16px;
+  background-image: url(../src/assets/mesh-757.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.banner p {
+  font-size: 2rem;
+  color: var(--primary-white);
+  font-weight: 500;
+}
+
+article {
+  background-color: var(--primary);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0px 5px 5px var(--shadow);
+}
+
+article a {
+  color: var(--color);
+}
+
+article a h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.postDate {
+  font-size: 13px;
+  color: var(--spec2);
+  width: 100%;
+  text-align: right;
+}
+
+.submitBtn,
+.deleteBtn {
+  width: fit-content;
+  align-self: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--spec3);
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+.editBtn {
+  background-color: var(--spec);
+  padding: 5px 10px;
+  color: var(--primary);
+  border-radius: 8px;
+  width: fit-content;
+  align-self: center;
+}
+
+.editBtn a {
+  color: var(--primary);
+}
+
+.deleteBtn {
+  margin-top: 30px;
+}
+
+.Post a {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.NewPost h2 {
+  margin-bottom: 20px;
+}
+
+.NewPost form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  gap: 20px;
+  font-size: 18px;
+}
+
+.NewPost form input {
+  height: 50px;
+  background-color: var(--search);
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  color: var(--color);
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.NewPost form input:focus {
+  border: 2px solid var(--color);
+}
+
+.NewPost form textarea {
+  width: 100%;
+  height: 300px;
+  background-color: var(--search);
+  border: none;
+  outline: none;
+  border-radius: 16px;
+  padding: 20px;
+  font-size: 16px;
+  resize: none;
+}
+
+.NewPost form textarea:focus {
+  border: 2px solid var(--color)
+}
+
+.submitBtn {
+  background-color: var(--spec2);
+}
+
+.About {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 50px 20px 0 20px
+}
+
+.About .heading{
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.About .footer,
+.footer .left,
+.footer .right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .left,
+.footer .right {
+  gap: 20px
+}
+
+.webInfo {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.webInfo img {
+  border-radius: 50%;
+  border: 2px solid var(--spec2)
+}
+
+.webInfo a {
+  color: var(--spec2)
+}
+
+.footer {
+  width: 100%;
+  height: 40px;
+}
