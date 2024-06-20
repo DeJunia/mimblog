@@ -1,22 +1,10 @@
 {
   "posts": [
     {
-      "id": "11",
-      "title": "Be the first person to post",
-      "datetime": "June 20, 2024 10:15:40 PM",
-      "body": "A grand price of $500,000 😂😂!! Just kidding"
-    },
-    {
-      "id": "111",
-      "title": "I need help ",
-      "datetime": "June 20, 2024 10:16:53 PM",
-      "body": "I need help with Laravel. It's so frustrating. Where can I get tutorials? "
-    },
-    {
-      "id": "1111",
-      "title": "You need help",
-      "datetime": "June 20, 2024 10:17:33 PM",
-      "body": "You need help, Yes you!, you need my help"
+      "id": 1,
+      "title": "How did I do ",
+      "datetime": "June 20, 2024 11:28:00 PM",
+      "body": "Rate my work"
     }
   ]
 }
